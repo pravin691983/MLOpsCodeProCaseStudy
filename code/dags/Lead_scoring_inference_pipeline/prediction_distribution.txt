@@ -1,0 +1,6 @@
+Prediction ratio for the date Sun Apr 16 22:00:48 2023 
+ 1   59.06% 
+ 0   40.94%
+Prediction ratio for the date Sun Apr 16 22:02:18 2023 
+ 1   59.06% 
+ 0   40.94%
