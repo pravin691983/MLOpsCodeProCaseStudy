@@ -1,6 +1,12 @@
 mlflow server --backend-store-uri='sqlite:////home/airflow/code/notebooks/lead_scoring_model_experimentation.db' --default-artifact-root="/home/airflow/code/mlruns/" --port=6007 --host=0.0.0.0
 
+mlflow server --backend-store-uri='sqlite:////home/airflow/code/notebooks/lead_scoring_model_experimentation.db' --default-artifact-root="/home/airflow/code/mlruns/" --port=6007 --host=0.0.0.0
+
 airflow db init
-airflow users create --username admin --firstname Peter  --lastname Parker  --role Admin  --email spiderman@superhero.org 
-airflow scheduler
+# airflow users create --username admin --firstname Pravin  --lastname Tawade  --role Admin  --email spiderman@superhero.org 
+
+airflow users create --username upgrad --firstname Pravin --lastname Tawade --role Admin --email spiderman@superhero.org --password admin
 airflow webserver
+
+airflow scheduler
+
