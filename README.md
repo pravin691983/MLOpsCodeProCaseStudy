@@ -1,4 +1,4 @@
-# Melanoma Detection Assignment
+# MLOps CodePro Case Study
 
 > In this assignment, we will focus on reproducibility, automation and a few aspects of collaboration of MLOps.
 
@@ -63,15 +63,13 @@ To classify any lead, we will require two types of information about it:
 
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
-## Conclusions
+#### Command to run MLFlow & Airflow server
 
-Based on our analysis choose a best multiclass classification model using a custom convolutional neural network in TensorFlow.:
-
-- The class rebalance helped in reducing overfititng of the data and thus the loass is beng reduced But it reduced the Acurracy very low
-- Initially we tried without the ImageDataGenerator which created data to over fit at high ratio
-- Then we introduced dropout and ImageDataGenerator which reduced the over fit
-
-### At last we tried Batch Normalization and Augumentation which really helped in carry forward.
+- mlflow server --backend-store-uri='sqlite:////home/database/Lead_scoring_mlflow_production.db' --default-artifact-root="/home/airflow/mlruns/" --port=6006 --host=0.0.0.0
+- airflow db init
+- airflow users create --username upgrad --firstname Pravin --lastname Tawade --role Admin --email spiderman@superhero.org --password admin
+- airflow webserver
+- airflow scheduler
 
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
@@ -86,6 +84,7 @@ Based on our analysis choose a best multiclass classification model using a cust
 - Tensor
 - Keras
 - Jupyter Notebook
+- Jarvislab.ai
 - MLflow
 - Airflow
 - pycaret
