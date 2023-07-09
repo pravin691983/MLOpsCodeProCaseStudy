@@ -9,8 +9,8 @@ from sqlite3 import Error
 
 from constants import *
 from utils import *
-from city_tier_mapping import *
-from significant_categorical_level import *
+from mapping.city_tier_mapping import *
+from mapping.significant_categorical_level import *
 import collections 
 
 ###############################################################################
@@ -87,7 +87,7 @@ def test_map_city_tier():
         output=test_map_city_tier()
 
     """
-    map_city_tier(DB_PATH,DB_FILE_NAME,city_tier_mapping) #load data into database
+    map_city_tier(DB_PATH,DB_FILE_NAME,city_tier_mapping_dict) #load data into database
     source_df = read_data_from_database(DB_FILE_NAME, 'city_tier_mapped')
     target_df = read_data_from_database(TEST_DB_FILE_NAME, 'city_tier_mapped_test_case')
     source_df.drop(columns=['index'], axis = 1, inplace=True, errors='ignore')
